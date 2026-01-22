@@ -33,7 +33,6 @@ areas = areas[areas >= 100]
 min_area = max(100, 0.5 * np.median(areas))
 regions = sorted([r for r in regions if r.area >= min_area], key=lambda r: (r.centroid[0], r.centroid[1]))
 
-
 plt.subplot(1,3,1)
 plt.imshow(I)
 plt.title("Original image")
@@ -57,3 +56,4 @@ for r in regions:
     i += 1
 
 plt.show()
+
